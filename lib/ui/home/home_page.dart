@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/second');
-          },
-          child:const Text('Go to Second Page'),
-        ),
+    return const MainScaffold(
+      title: 'Home Page',
+      showDrawer: true,
+      child: Center(
+        child: Text('HOME'),
       ),
     );
   }

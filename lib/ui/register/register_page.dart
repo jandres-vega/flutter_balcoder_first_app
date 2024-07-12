@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -12,7 +13,12 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return const MainScaffold(
+        title: 'Register',
+        showDrawer: true,
+        child: Center(
+          child: Text('Register Page'),
+        )
+    );
   }
 }
