@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../routes/app_routes.dart';
+
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
 
@@ -12,20 +14,24 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   Widget build(BuildContext context) {
     return ListView(
       padding: EdgeInsets.zero,
-      children: const [
-        DrawerHeader(
+      children: [
+        const DrawerHeader(
           decoration: BoxDecoration(
             color: Colors.blue,
           ),
           child: Text('Menú'),
         ),
         ListTile(
-          title: Text('Item 1'),
-          onTap: null,
+          title: const Text('Iniciar sesion'),
+          onTap: () {
+            Navigator.pushNamed(context, AppRoutes.login);
+          },
         ),
         ListTile(
-          title: Text('Item 2'),
-          onTap: null,
+          title: const Text('Registrarse'),
+          onTap: () {
+            Navigator.pushNamed(context, AppRoutes.register);
+          },
         ),
       ],
     );
