@@ -10,15 +10,17 @@ class CustomFieldText extends StatelessWidget {
 
   const CustomFieldText({super.key,
     required this.label,
-    required this.password,
+    this.password = false,
     required this.hint,
-    required this.icon, this.validator
+    required this.icon,
+    this.validator
   });
 
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: password,
       decoration: InputDecoration(
         labelText: label,
         hintText: hint,
