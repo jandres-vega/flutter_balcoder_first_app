@@ -10,6 +10,14 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
         onPressed: onPressed,
+        style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(Colors.deepPurpleAccent[200]!),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)
+                )
+            )
+        ),
         child: Text(
           text,
           style: const TextStyle(
