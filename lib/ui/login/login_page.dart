@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_balcoder_first_app/utils/widget/custom_field_text.dart';
 import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
+import 'package:flutter_balcoder_first_app/utils/mixins/text_form_validate.dart';
 
 class LoginPage extends StatefulWidget {
 
@@ -12,9 +13,11 @@ class LoginPage extends StatefulWidget {
   }
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends State<LoginPage> with TextFormValidate {
 
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,23 +34,34 @@ class _LoginPageState extends State<LoginPage> {
                         Icons.lock,
                         size: 100,
                       ),
-                      const CustomFieldText(
+                      CustomFieldText(
+                        controller: _emailController,
+                        keyboardType: TextInputType.emailAddress,
                         label: 'Email',
                         hint: 'Ingresa el email',
                         icon: Icons.email,
+                        validator: validateEmail,
                       ),
                       const SizedBox(height: 20),
-                      const CustomFieldText(
+                      CustomFieldText(
+                        controller: _passwordController,
+                        keyboardType: TextInputType.text,
                         label: 'Password',
                         hint: 'Ingresa el password',
                         password: true,
                         icon: Icons.password,
+                        validator: validatePassword,
                       ),
                       Container(
                         margin: const EdgeInsets.only(top: 20, bottom: 20),
                         width: double.infinity,
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              if (_formKey.currentState!.validate()) {
+                                print('Email: ${_emailController.text}');
+                                print('Password: ${_passwordController.text}');
+                              }
+                            },
                             style: ElevatedButton.styleFrom(
                               padding: const EdgeInsets.all(15),
                             ),
