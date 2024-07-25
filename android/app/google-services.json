@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99693540560",
+    "project_id": "barcode-d50e4",
+    "storage_bucket": "barcode-d50e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99693540560:android:75cc3837667195c8b01ad5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_balcoder_first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBasvyxcqihBFYBgKxYvi_OgSKRAjeq4vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
