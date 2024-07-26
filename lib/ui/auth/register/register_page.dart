@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_balcoder_first_app/services/auth/auth_service.dart';
+import 'package:flutter_balcoder_first_app/utils/mixins/text_form_validate.dart';
 import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
 
-import '../../utils/mixins/text_form_validate.dart';
-import '../../utils/widget/custom_field_text.dart';
+import '../../../utils/widget/custom_app_bar.dart';
+import '../../../utils/widget/custom_field_text.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -33,6 +34,7 @@ class _RegisterPageState extends State<RegisterPage> with TextFormValidate {
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
+      appBar: const CustomAppBar(title: 'Register', showDrawer: true),
         title: 'Register',
         showDrawer: true,
         child: Center(
