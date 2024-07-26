@@ -6,12 +6,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MainScaffold(
-      title: 'Home Page',
-      showDrawer: true,
-      child: Center(
-        child: Text('HOME'),
-      ),
+    return const Center(
+      child: MainScaffold(
+          title: 'Home',
+          showDrawer: true,
+          child: Text('Home Page')
+      )
     );
   }
 }
