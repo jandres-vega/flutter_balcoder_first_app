@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/drawer_widget.dart';
+
+
+import 'custom_app_bar.dart';
+import 'drawer_widget.dart';
 
 class MainScaffold extends StatefulWidget {
 
   final Widget child;
   final String title;
   final bool showDrawer;
+  final Widget? bottomNavigationBar;
+  final PreferredSizeWidget? appBar;
 
   const MainScaffold({
     super.key,
     required this.child,
     required this.title,
-    required this.showDrawer
+    required this.showDrawer, this.bottomNavigationBar, this.appBar
   });
 
   @override
@@ -23,7 +28,7 @@ class _MainScaffoldState extends State<MainScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+          title: Text(widget.title),
           leading: widget.showDrawer
               ? Builder(
               builder: (context) => IconButton(
@@ -45,3 +50,4 @@ class _MainScaffoldState extends State<MainScaffold> {
     );
   }
 }
+
