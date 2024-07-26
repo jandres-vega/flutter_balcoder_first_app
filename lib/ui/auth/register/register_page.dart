@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_balcoder_first_app/services/auth/auth_service.dart';
 import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
 
 import '../../utils/mixins/text_form_validate.dart';
@@ -21,6 +22,12 @@ class _RegisterPageState extends State<RegisterPage> with TextFormValidate {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _passwordConfirmationController = TextEditingController();
+
+  void register() async{
+    if (_formKey.currentState!.validate()) {
+      await AuthService().registerWithEmailAndPassword(_emailController.text, _passwordController.text, _nameController.text);
+    }
+  }
 
 
   @override
@@ -89,12 +96,7 @@ class _RegisterPageState extends State<RegisterPage> with TextFormValidate {
                       margin: const EdgeInsets.only(top: 20, bottom: 20),
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {
-                            if (_formKey.currentState!.validate()) {
-                              print('Email: ${_emailController.text}');
-                              print('Password: ${_passwordController.text}');
-                            }
-                          },
+                          onPressed: () => register(),
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.all(15),
                           ),
