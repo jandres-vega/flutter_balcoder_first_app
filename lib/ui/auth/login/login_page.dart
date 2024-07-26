@@ -4,6 +4,8 @@ import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
 import 'package:flutter_balcoder_first_app/utils/mixins/text_form_validate.dart';
 import 'package:flutter_balcoder_first_app/utils/widget/snack_bar.dart';
 
+import '../../../utils/widget/custom_app_bar.dart';
+
 class LoginPage extends StatefulWidget {
 
   const LoginPage({super.key});
@@ -23,6 +25,7 @@ class _LoginPageState extends State<LoginPage> with TextFormValidate {
   @override
   Widget build(BuildContext context) {
     return MainScaffold(
+      appBar: const CustomAppBar(title: 'Login', showDrawer: true),
         title: 'Login',
         showDrawer: true,
         child: Center(
