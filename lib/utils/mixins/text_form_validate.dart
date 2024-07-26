@@ -1,8 +1,12 @@
 mixin TextFormValidate {
 
   String? validateRequired(String? value) {
+    final numberRegex = RegExp(r'[0-9]');
     if(value == null || value.isEmpty){
       return 'Este campo es requerido';
+    }
+    if (numberRegex.hasMatch(value)) {
+      return 'No se permiten números';
     }
     return null;
   }
@@ -48,4 +52,5 @@ mixin TextFormValidate {
     }
     return null;
   }
+
 }
