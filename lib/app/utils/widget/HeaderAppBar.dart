@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/gradient_back.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/list_card_image.dart';
+import 'gradient_back.dart';
+import 'list_card_image.dart';
+
 
 class HeaderAppBar extends StatelessWidget {
   const HeaderAppBar({super.key});

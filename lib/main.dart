@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_balcoder_first_app/utils/routes/app_routes.dart';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'app/utils/routes/app_routes.dart';
 import 'firebase_options.dart';
 
 main() async {

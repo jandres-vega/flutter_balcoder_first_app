@@ -43,7 +43,7 @@ class _Splash extends State<Splash> {
                   height: 300,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/img/gogetta.jpg'),
+                      image: AssetImage('assets/img/BALCODER.png'),
                       fit: BoxFit.cover,
                     ),
                     shape: BoxShape.circle,

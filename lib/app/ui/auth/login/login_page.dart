@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/custom_field_text.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/main_scaffold.dart';
-import 'package:flutter_balcoder_first_app/utils/mixins/text_form_validate.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/snack_bar.dart';
 
+import '../../../utils/mixins/text_form_validate.dart';
 import '../../../utils/widget/custom_app_bar.dart';
+import '../../../utils/widget/custom_field_text.dart';
+import '../../../utils/widget/main_scaffold.dart';
+import '../../../utils/widget/snack_bar.dart';
 
 class LoginPage extends StatefulWidget {
 

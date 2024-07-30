@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_balcoder_first_app/ui/article/form_article.dart';
-import 'package:flutter_balcoder_first_app/ui/home/home_page.dart';
-import 'package:flutter_balcoder_first_app/ui/profile/profile.dart';
+
+import '../../ui/article/form_article.dart';
+import '../../ui/home/home_page.dart';
+import '../../ui/profile/profile.dart';
 
 class BlogNavigation extends StatefulWidget {
   const BlogNavigation({super.key});

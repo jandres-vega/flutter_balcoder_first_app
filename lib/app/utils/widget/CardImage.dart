@@ -1,12 +1,16 @@
+
+
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/Floating_action_like.dart';
-import 'package:flutter_balcoder_first_app/utils/widget/card.dart';
+
+import 'Floating_action_like.dart';
+import 'card.dart';
+
 
 class CardImage extends StatelessWidget {
 
-  String pathImage = "assets/img/img1.jpg";
+  final String pathImage;
 
-  CardImage(this.pathImage,{super.key});
+  const CardImage({super.key, required this.pathImage});
 
   @override
   Widget build(BuildContext context) {

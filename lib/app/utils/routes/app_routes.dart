@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_balcoder_first_app/ui/auth/login/login_page.dart';
-import 'package:flutter_balcoder_first_app/ui/auth/register/register_page.dart';
-import 'package:flutter_balcoder_first_app/ui/home/home_page.dart';
-import 'package:flutter_balcoder_first_app/ui/splash/splash.dart';
+import '../../ui/auth/login/login_page.dart';
+import '../../ui/auth/register/register_page.dart';
+import '../../ui/home/home_page.dart';
+import '../../ui/splash/splash.dart';
+
 
 
 class AppRoutes {
