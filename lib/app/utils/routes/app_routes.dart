@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import '../../ui/auth/login/login_page.dart';
 import '../../ui/auth/register/register_page.dart';
 import '../../ui/home/home_page.dart';
-import '../../ui/splash/splash.dart';
-
-
+import '../../ui/pages/splash/splash.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -16,7 +14,7 @@ class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
       case splash:
-        return CupertinoPageRoute(builder: (context) => const Splash());
+        return MaterialPageRoute(builder: (context) => const Splash());
       case home:
         return MaterialPageRoute(builder: (context) => const HomePage());
       case login:
