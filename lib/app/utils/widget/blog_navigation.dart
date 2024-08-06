@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../ui/article/form_article.dart';
-import '../../ui/home/home_page.dart';
+import '../../ui/pages/home/home_page.dart';
 import '../../ui/profile/profile.dart';
 
 class BlogNavigation extends StatefulWidget {
