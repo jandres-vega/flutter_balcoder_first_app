@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../ui/auth/login/login_page.dart';
-import '../../ui/auth/register/register_page.dart';
-import '../../ui/home/home_page.dart';
-import '../../ui/pages/splash/splash.dart';
+import '../../ui/pages/home/home_page.dart';
+import '../../ui/pages/register/register_page.dart';
+import '../../ui/pages/splash/splash_page.dart';
 
 class AppRoutes {
   static const String splash = '/';
